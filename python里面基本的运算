@@ -8,3 +8,28 @@ print(a/b)  //输出a/b的结果 0.75
 print(a//b) //将a/b的结果向下取整 0
 print(a%b)  //输出a取余b的结果 3
 print(a**b) //输出a的b次方  81
+
+"""
+使用input()函数获取键盘输入
+使用int()进行类型转换
+用占位符格式化输出的字符串
+"""
+a=int(input('a='))
+b=int(input('b='))
+print('%d+%d=%d'%(a,b,a+b))
+print("%d-%d=%d"%(a,b,a-b))
+print("%d*%d=%d"%(a,b,a*b))
+print("%d/%d=%f"%(a,b,a/b))  //注意是%f
+print("%d//%d=%d"%(a,b,a//b))
+print("%d%%%d=%d"%(a,b,a%b))   //注意是%%
+print("%d**%d=%d"%(a,b,a**b))
+
+a=3
+b=4
+3+4=7
+3-4=-1
+3*4=12
+3/4=0.750000
+3//4=0
+3%4=3
+3**4=81
