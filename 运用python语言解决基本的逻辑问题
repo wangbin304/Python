@@ -139,3 +139,31 @@ while True:
         break
 print("您破产了！")
 
+
+7）
+"""
+
+猜数字游戏
+计算机出一个1~100之间的随机数由人来猜
+计算机根据人猜的数字分别给出提示大一点/小一点/猜对了
+
+
+from random import randint
+counter=0
+shuzi=randint(1,101)
+while True:
+    counter+=1
+    num=int(input('猜的数字是：'))
+    if(num<shuzi):
+        print('大一点！')
+    elif(num>shuzi):
+        print('小一点！')
+    else:
+        print('猜对了！')
+        break
+print('您共猜了%d次'%counter)
+if(counter>7):
+    print('你的智商明显不足！')
+
+
+"""
