@@ -29,6 +29,7 @@ def is_sushu(num):
     return flag==0 and num!=1
     
 4）写一个程序判断输入的正整数是不是回文素数。
+
 from math import sqrt
 def is_huiwensushu(num):
     temp=num
@@ -42,7 +43,8 @@ def is_huiwensushu(num):
             if(num%x==0):
                 flag=1
         return flag==0 and num!=1
-        
+    else:
+        return False
 或者是我们将代码中重复出现的和相对独立的功能抽取成函数后，组合使用这些函数来解决更为复杂的问题
 
 def is_palindrome(num):
