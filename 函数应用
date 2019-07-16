@@ -1,0 +1,63 @@
+1）实现计算求最大公约数和最小公倍数的函数。
+def gcd(x,y):  #最大公约数
+    (x,y)=(y,x) if x>y else (x,y)
+    for a in range(x,0,-1):
+        if(x%a==0 and y%a==0):
+            return a
+def lcm(x,y):  #最小公倍数
+    return x*y//gcd(x,y)
+    
+2）实现判断一个数是不是回文数的函数。
+
+def is_huiwenshu(num):
+    temp=num
+    t=0
+    while(temp):
+        t=t*10+temp%10
+        temp//=10
+    return t==num
+
+3）实现判断一个数是不是素数的函数。
+from math import sqrt
+def is_sushu(num):
+    a=int(sqrt(num))
+    flag=0
+    for temp in range (2,a+1):
+        if(num%temp==0):
+            flag=1
+            break
+    return flag==0 and num!=1
+    
+4）写一个程序判断输入的正整数是不是回文素数。
+from math import sqrt
+def is_huiwensushu(num):
+    temp=num
+    t=0
+    while temp:
+        t=t*10+temp%10
+        temp//=10
+    flag=0
+    if(t==num):
+        for x in range(2,int(sqrt(num))+1):
+            if(num%x==0):
+                flag=1
+        return flag==0 and num!=1
+        
+或者是我们将代码中重复出现的和相对独立的功能抽取成函数后，组合使用这些函数来解决更为复杂的问题
+
+def is_palindrome(num):
+    temp = num
+    total = 0
+    while temp > 0:
+        total = total * 10 + temp % 10
+        temp //= 10
+    return total == num
+def is_prime(num):
+    for factor in range(2, num):
+        if num % factor == 0:
+            return False
+    return True if num != 1 else False
+#if __name__ == '__main__':
+num = int(input('请输入正整数: '))
+if is_palindrome(num) and is_prime(num):
+    print('%d是回文素数' % num)
