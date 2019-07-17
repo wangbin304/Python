@@ -1,5 +1,8 @@
 （一）几个普通的小练习
 1）实现计算求最大公约数和最小公倍数的函数。
+#python-flask
+python for flask
+'''python
 def gcd(x,y):  #最大公约数
     (x,y)=(y,x) if x>y else (x,y)
     for a in range(x,0,-1):
@@ -7,7 +10,7 @@ def gcd(x,y):  #最大公约数
             return a
 def lcm(x,y):  #最小公倍数
     return x*y//gcd(x,y)
-    
+'''python
 2）实现判断一个数是不是回文数的函数。
 
 def is_huiwenshu(num):
