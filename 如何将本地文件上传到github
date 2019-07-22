@@ -8,16 +8,26 @@
        mkdir Demo
        cd Demo
        
+       git init #初始化本地文件，产生隐藏文件.git
+       
        vi/vim a1.php
        git status
 
 暂存区
        git add a1.php
        git status
+       
+       ###注意：此处需要 配置好 .git 文件里面的config文件  
+       # 为什么无法同步： 私有项目，没有权限，输入用户名密码，或者远程地址采用这种类型
+        # vi .git/config   或者直接打开.git/config
+        #   [remote "origin"]
+             #      url=https://github.com/用户名/仓库名.git 修改为
+             #      [remote "origin"]
+             #      url=https://用户名：密码@github.com/用户名/仓库名.git
 
 
 本地git仓库
-       git  commit a1.php
+       git  commit a1.php  # git commit -m "注释内容"  提交索引库中的内容；-m是参数，表示注释内容，主要用来记录此次操作
        git status
 
 远程git仓库
