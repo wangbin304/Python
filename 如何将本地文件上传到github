@@ -1,0 +1,24 @@
+本地文件
+       git config --global wangbin304
+       git config --global 421526594@qq.com
+       
+       cd /d
+       mkdir mygit
+       
+       mkdir Demo
+       cd Demo
+       
+       vi/vim a1.php
+       git status
+
+暂存区
+       git add a1.php
+       git status
+
+
+本地git仓库
+       git  commit a1.php
+       git status
+
+远程git仓库
+       git push
