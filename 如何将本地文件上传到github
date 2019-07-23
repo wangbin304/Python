@@ -27,7 +27,7 @@
 
 
 本地git仓库
-       git  commit a1.php  # git commit -m "注释内容"  提交索引库中的内容；-m是参数，表示注释内容，主要用来记录此次操作
+       git  commit a1.php  # git commit -m "注释内容a1.php"   提交索引库中的内容；-m是参数，表示注释内容，主要用来记录此次操作
        git status
 
 远程git仓库
