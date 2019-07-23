@@ -32,3 +32,33 @@
 
 远程git仓库
        git push
+
+
+删除文件
+       #删除本地文件
+      rm -rf a1.php
+       #删除本地暂存区文件
+      git rm a1.php
+      
+ 
+ 注意：42152@LAPTOP-4TB5SFKU MINGW64 /d/mygit/python (master)
+$ git push
+To https://github.com/wangbin304/python.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://wangbin304:wangbin4873@github.com/wangbin304/python.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+出错问题如上时
+
+出现这样的报错一般是因为本地仓库分支的代码和远程仓库分支的代码不一致了。需要先拉取(fetch)远程分支的代码并在本地对两个分支的代码进行合并(merge / rebase)后才能继续向远程仓库分支 push 代码。
+合并代码：
+git pull --rebase origin master
+代码解释：
+git pull --rebase = git fetch + git rebase
+推送代码：
+git push
+至此，问题解决。
